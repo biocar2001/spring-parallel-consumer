@@ -53,7 +53,7 @@ public class DemoSpringParallelApplication {
 	}*/
 
 	@Bean
-	ApplicationRunner runner(KafkaListenerEndpointRegistry registry, DefaultKafkaProducerFactory<String, String> pf , ConsumerFactory<String, String> cf,
+	ApplicationRunner runner(KafkaListenerEndpointRegistry registry, ProducerFactory<String, String> pf , ConsumerFactory<String, String> cf,
 							 KafkaTemplate<String, String> template) {
 
 		return args -> {
