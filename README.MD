@@ -1,6 +1,8 @@
 Ejemplo de uso de parallel consumer confluent, consumiendo y produciendo con spring:
 
 # DEMO:
+- docker-compose -f docker-compose.yml up
+- docker exec -it [id_container_broker]
 - kafka-topics --create --topic parallel-consumer-input-topic --bootstrap-server broker:9092 --replication-factor 1 --partitions 1
 - kafka-topics --create --topic parallel-consumer-ouput-topic --bootstrap-server broker:9092 --replication-factor 1 --partitions 1
 
